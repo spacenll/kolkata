@@ -1,0 +1,102 @@
+/* إعدادات عامة */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f5f5dc; /* لون بيج ناعم */
+    color: #673212; /* اللون البني المعتمد */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.container {
+    text-align: center;
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 80vh; /* لتوزيع العناصر بين أعلى وأسفل */
+}
+
+/* الشعار */
+.logo {
+    max-width: 80px;
+    height: auto;
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeInDown 1.5s forwards;
+}
+
+/* النصوص */
+.content {
+    opacity: 0;
+    animation: fadeIn 2s forwards 0.5s;
+}
+
+.arabic-text {
+    font-family: 'Alexandria', sans-serif;
+    font-weight: 200; /* خط نحيف جداً */
+    font-size: 3rem;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.english-text {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 100; /* خط نحيف جداً */
+    font-size: 1.2rem;
+    letter-spacing: 8px;
+    margin-bottom: 30px;
+}
+
+.divider {
+    width: 40px;
+    height: 1px;
+    background-color: #673212;
+    margin: 0 auto 20px;
+}
+
+.description {
+    font-family: 'Alexandria', sans-serif;
+    font-weight: 300;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* التذييل والأيقونات */
+.social-footer {
+    opacity: 0;
+    animation: fadeInUp 1.5s forwards 1s;
+}
+
+.instagram-link {
+    color: #673212;
+    font-size: 2rem;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+    display: inline-block;
+}
+
+.instagram-link:hover {
+    transform: scale(1.1);
+}
+
+/* تأثيرات الحركة (Animations) */
+@keyframes fadeInDown {
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+    to { opacity: 1; }
+}
